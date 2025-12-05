@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></script>
+<script src="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #343a40;
+        }
+        .table-container {
+            width: 90%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        table.dataTable thead th {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+        table.dataTable tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+	
+</head>
+<body>
+<h2>Scraped Results {{ data.url }}</h2>
+<table id="table" class="display">
+<thead><tr><th>Anunt</th><th>Pret</th><th>Locatie</th><th>Suprafata</th></tr></thead>
+<tbody>
+{% for row in data.anunturi %}
+<tr>
+<td>{{ row.t_anunt }}</td>
+<td>{{ row.t_pret }}</td>
+<td>{{ row.t_locatie }}</td>
+<td>{{ row.t_suprafata }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<script>$(document).ready(()=>$("#table").DataTable());</script>
+</body></html>
