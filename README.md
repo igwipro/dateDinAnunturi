@@ -78,19 +78,17 @@ python app.py
 
 The app will start on:
 
-    http://127.0.0.1:5000/
+    http://127.0.0.1:8888/
 
 If your main file has a different name, replace `app.py` accordingly.
 
 ------------------------------------------------------------------------
 
-## 5. Deactivating the Virtual Environment
+## 5. APP check on 
 
 When you're done working:
 
-``` bash
-deactivate
-```
+http://127.0.0.1:8888/scrape
 
 ------------------------------------------------------------------------
 

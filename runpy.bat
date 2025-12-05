@@ -1,2 +1,2 @@
-C:\APPS\mypy\venv\Scripts\activate
+venv\Scripts\activate
 

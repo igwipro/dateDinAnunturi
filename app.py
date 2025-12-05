@@ -90,9 +90,10 @@ def scrape_page():
 
     return render_template("scrape.html")
 
+
 @app.route('/')
 def hello():
-    return "Demo for Bogdan!"
+    return render_template('index.html')
     
     
 @app.teardown_appcontext
