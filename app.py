@@ -75,13 +75,13 @@ def login():
     return render_template("login.html")
 
 @app.route("/logout")
-@login_required
+#@login_required
 def logout():
     logout_user()
     return redirect("/login")
 
 @app.route("/scrape", methods=["GET", "POST"])
-@login_required
+#@login_required
 def scrape_page():
     if request.method == "POST":
         url = request.form["url"]
